@@ -1,0 +1,45 @@
+body {
+	font-family: "calibri";
+    background: #efefef;
+    padding: 32px;
+    padding-top: 16px;
+    color: #333;
+}
+h1,h3 {
+	text-align: center;
+	color: #787878;
+}
+
+label{}
+p,code{
+	font-size: 30px;
+	text-align: center;
+	color: green;
+	
+}
+.blink_text {
+
+    animation:1s blinker linear infinite;
+    -webkit-animation:1s blinker linear infinite;
+    -moz-animation:1s blinker linear infinite;
+
+     
+    }
+
+    @-moz-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }

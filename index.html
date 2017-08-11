@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>CGPI</title>
+	<link rel="shortcut icon" href="https://maxcdn.icons8.com/Share/icon/nolan/Programming//source_code1600.png">
+
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>CGPI & Percentage <<span class="blink_text">/</span>></h1>
+		<h3>This web page will allow to do simple conversion between CGPA & Percentage</h3><hr>
+		<div class="row">
+		  <div class="col-md-12">
+			<div class="panel panel-default panel-height">
+		  		<div class="panel-heading"><Big>Fill Marks: <big></div>
+		  			<div class="panel-body ">
+		  				<div class="row">
+		  					<div class="col-md-6">
+		  						<div class="form-group">
+                                            <label for="exampleInputEmail2">CGPI to Percentage:</label>
+                                           <input type="number" id="pointer" placeholder="Enter CGPA" min="1" max="2" class="form-control">
+                                </div>
+                                <div class="form-group">		  						
+								<p><code id="demopoi"></code></p>
+							    </div>
+		  					</div>
+		  					<div class="col-md-6">
+		  						<div class="form-group">
+					  						<label>Percentage to CGPI:</label>		  						
+											<input type="number" id="percentage" placeholder="Enter percentage" min="1" max="100" class="form-control">
+							    </div>
+								<div class="form-group">		  						
+								<p ><code id="demoper"></code></p>
+							    </div>
+		  					</div>
+		  				</div>
+		  				
+		  			</div>
+		  		</div>
+		  	</div>
+		</div>
+	</div>
+	<div class="footer">
+		<h4>Thanks You :)</h4>
+	</div>
+
+	
+
+
+<script type="text/javascript">
+
+	var poi = document.getElementById("pointer");
+	poi.addEventListener("input", function(){
+		var pointer = poi.value;
+	if(pointer >=7.00){
+		perValue = (pointer*7.4 + 12)
+		document.getElementById("demopoi").innerHTML = "CGPA " + pointer +" ≈ " + perValue.toFixed(2) +"%";
+	}else{
+		perValue = (pointer*7.1 + 12)
+		document.getElementById("demopoi").innerHTML = "CGPA " + pointer +" ≈ " + perValue.toFixed(2) +"%";
+	}	
+
+	
+		}
+    );
+
+	var per = document.getElementById("percentage");
+	per.addEventListener("input", function(){		
+		var percentage = per.value;
+		if(percentage >=63.80){
+			poiValue = ((percentage - 12)/7.4);
+			document.getElementById("demoper").innerHTML = percentage + "% ≈ " + poiValue.toFixed(2);
+		}else{
+			poiValue = ((percentage - 12)/7.1);
+			document.getElementById("demoper").innerHTML = percentage + "% ≈ " + poiValue.toFixed(2);
+		}
+
+	
+		}
+    );
+</script>
+
+
+</body>
+</html>
